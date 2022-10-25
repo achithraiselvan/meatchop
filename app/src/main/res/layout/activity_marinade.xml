@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.MarinadeActivity">
+
+    <LinearLayout
+        android:id="@+id/topbar_marinadescreen"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="55dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/back_icon"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_backbutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/selectedctgy_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose your meat"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fieldseperator_color"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollview_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar_marinadescreen"
+        android:layout_marginBottom="15dp"
+        android:fillViewport="true"
+        android:layout_above="@+id/additem_layout">
+
+        <!--com.meatchop.widget.MarinadeExpandableListView
+            android:id="@+id/marinades_listview"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:listSelector="@android:color/transparent"
+            android:divider="@color/white"
+            android:childDivider="@color/white"
+            android:dividerHeight="1dp" /-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/detail_fields_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/meatnotrequired_layout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/topbar_marinadescreen"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/itemnotselected_view"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/icon_marinadeselection_circle"/>
+
+                    <ImageView
+                        android:id="@+id/itemselected_view"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:visibility="gone"
+                        android:src="@drawable/radiobutton"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/expandedListTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I need only the Marinade box"
+                        android:textSize="15sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_semibold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/additem_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="left|center"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/addmarinadeitem_border"
+        android:orientation="horizontal">
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/itemtotal_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:text="Item total"
+            android:textSize="13sp"
+            android:textColor="@color/primary_text_color"
+            app:customTextViewFont="@string/font_open_sans_regular" />
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/additem_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="ADD ITEM"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            app:customTextViewFont="@string/font_open_sans_bold" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/loadinganimmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.70">
+    </FrameLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loadinganim_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:indicatorColor="@color/meatchopbg_red"
+        app:indicatorName="BallPulseIndicator" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TMCTextView">
+        <attr name="customTextViewFont" format="string"/>
+        <attr name="tv_selectedColor" format="color"/>
+        <attr name="stateChangeable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="TMCEditText">
+        <attr name="customEditTextFont" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundishImageView">
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="roundedCorners">
+            <flag name="topLeft" value="1" />
+            <flag name="topRight" value="2" />
+            <flag name="bottomRight" value="4" />
+            <flag name="bottomLeft" value="8" />
+            <flag name="all" value="15" />
+        </attr>
+    </declare-styleable>
+</resources>

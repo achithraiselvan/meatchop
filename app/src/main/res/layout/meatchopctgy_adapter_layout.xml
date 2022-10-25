@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/fieldseperator_color"/>
+
+    <LinearLayout
+        android:id="@+id/itemname_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/itemname_text"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="left"
+            android:text="Chicken"
+            android:textSize="12sp"
+            android:textColor="@color/primary_text_color"
+            app:customTextViewFont="@string/font_open_sans_regular"/>
+
+    </LinearLayout>
+
+</LinearLayout>

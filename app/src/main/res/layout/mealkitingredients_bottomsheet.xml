@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/mealkit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chicken Chettinad Gravy"
+                android:textSize="16sp"
+                android:textColor="@color/meatchopbg_red"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/noofingredients_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/ingredientsno_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textSize="20sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:text="Ingredients"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_regular"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/calories_layout"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/calories_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="320"
+                        android:textSize="20sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:text="Calories"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_regular"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cookingtime_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/cookingtime_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="35"
+                        android:textSize="20sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:text="Minutes"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_regular"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/mealkit_desp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="South India's most flavorful dish made with Chicken, fresh ground spices and herbs."
+                android:textSize="14sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ingredients_fields_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

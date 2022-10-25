@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.MealKitActivity">
+
+    <LinearLayout
+        android:id="@+id/topbar_homescreen"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="55dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/back_icon"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_backbutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/changemenuctgy_layout"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/selectedctgy_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chicken"
+                    android:textSize="14sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/icon_ctgydropdown"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/searchbtn_layout"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/icon_search"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/cartbtn_layout"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginRight="15dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_cart"/>
+
+                <LinearLayout
+                    android:id="@+id/cartitemcount_layout"
+                    android:layout_width="17dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="7dp"
+                    android:visibility="visible"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:background="@drawable/cart_circle">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/cartitemcount_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        app:customTextViewFont="@string/font_open_sans_regular"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fieldseperator_color"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar_homescreen"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/detail_fields_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/menuctgymask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.60"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/menuctgy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/selectactgy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Choose a category"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text_color"
+            app:customTextViewFont="@string/font_open_sans_regular"/>
+
+        <com.meatchop.widget.AnimatedExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:listSelector="@android:color/transparent"
+            android:divider="@color/white"
+            android:childDivider="@color/white"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/loadinganimmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.60">
+    </FrameLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loadinganim_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:indicatorColor="@color/meatchopbg_red"
+        app:indicatorName="BallPulseIndicator" />
+
+
+</RelativeLayout>

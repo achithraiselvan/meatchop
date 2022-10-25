@@ -1,0 +1,82 @@
+diff --git a/src/main/java/com/meatchop/activities/HomeScreenActivity.java b/src/main/java/com/meatchop/activities/HomeScreenActivity.java
+index 69a1a16..d161a7f 100644
+--- a/src/main/java/com/meatchop/activities/HomeScreenActivity.java
++++ b/src/main/java/com/meatchop/activities/HomeScreenActivity.java
+@@ -4008,6 +4008,7 @@ public class HomeScreenActivity extends BaseActivity implements View.OnClickList
+ 
+         schedulerThread.postDelayed(new Runnable() {
+             public void run() {
++                Log.d(TAG, "isDataLoaded "+isDataLoaded);
+                 if (isDataLoaded) {
+                     applaunchimage_layout.setVisibility(View.GONE);
+                 } else {
+diff --git a/src/main/java/com/meatchop/activities/MainActivity.java b/src/main/java/com/meatchop/activities/MainActivity.java
+index 96d0205..40b14b4 100644
+--- a/src/main/java/com/meatchop/activities/MainActivity.java
++++ b/src/main/java/com/meatchop/activities/MainActivity.java
+@@ -7,12 +7,15 @@ import android.os.Bundle;
+ import android.os.Handler;
+ import android.util.Log;
+ import android.view.View;
++import android.widget.ImageView;
+ 
+ import androidx.core.app.ActivityCompat;
+ 
+ import com.amazonaws.mobile.client.AWSMobileClient;
+ import com.amazonaws.mobile.client.Callback;
+ import com.amazonaws.mobile.client.UserStateDetails;
++import com.bumptech.glide.Glide;
++import com.bumptech.glide.load.engine.DiskCacheStrategy;
+ import com.meatchop.R;
+ import com.meatchop.services.CurrentLocationService;
+ import com.meatchop.services.TMCMessagingService;
+@@ -39,7 +42,7 @@ public class MainActivity extends BaseActivity {
+ 
+         View nonetwork_view = findViewById(R.id.no_network_view);
+         View nointernetretry_btn = findViewById(R.id.nointernetretry_btn);
+-     // Sentry.captureMessage("testing SDK setup");
++        // Sentry.captureMessage("testing SDK setup");
+ 
+      // startService(new Intent(MainActivity.this, TMCMessagingService.class));
+         clearNotifications();
+diff --git a/src/main/res/layout/activity_main.xml b/src/main/res/layout/activity_main.xml
+index 8d133bf..6586f33 100644
+--- a/src/main/res/layout/activity_main.xml
++++ b/src/main/res/layout/activity_main.xml
+@@ -18,7 +18,7 @@
+             android:layout_height="match_parent"
+             android:scaleType="centerCrop"
+             android:adjustViewBounds="true"
+-            android:src="@mipmap/image_applaunch_screen_1"/>
++            android:src="@mipmap/image_applaunchscreen_2"/>
+     </LinearLayout>
+ 
+     <LinearLayout
+diff --git a/src/main/res/layout/home_screen_activity.xml b/src/main/res/layout/home_screen_activity.xml
+index d26fbde..445ba23 100644
+--- a/src/main/res/layout/home_screen_activity.xml
++++ b/src/main/res/layout/home_screen_activity.xml
+@@ -1276,7 +1276,7 @@
+             android:layout_height="match_parent"
+             android:scaleType="centerCrop"
+             android:adjustViewBounds="true"
+-            android:src="@mipmap/image_applaunch_screen_1"/>
++            android:src="@mipmap/image_applaunchscreen_2"/>
+     </LinearLayout>
+ 
+ 
+diff --git a/src/main/res/mipmap-hdpi/icon.png b/src/main/res/mipmap-hdpi/icon.png
+index a41917d..870d0d1 100644
+Binary files a/src/main/res/mipmap-hdpi/icon.png and b/src/main/res/mipmap-hdpi/icon.png differ
+diff --git a/src/main/res/mipmap-mdpi/icon.png b/src/main/res/mipmap-mdpi/icon.png
+index a41917d..870d0d1 100644
+Binary files a/src/main/res/mipmap-mdpi/icon.png and b/src/main/res/mipmap-mdpi/icon.png differ
+diff --git a/src/main/res/mipmap-xhdpi/icon.png b/src/main/res/mipmap-xhdpi/icon.png
+index a41917d..870d0d1 100644
+Binary files a/src/main/res/mipmap-xhdpi/icon.png and b/src/main/res/mipmap-xhdpi/icon.png differ
+diff --git a/src/main/res/mipmap-xxhdpi/icon.png b/src/main/res/mipmap-xxhdpi/icon.png
+index a41917d..870d0d1 100644
+Binary files a/src/main/res/mipmap-xxhdpi/icon.png and b/src/main/res/mipmap-xxhdpi/icon.png differ
+diff --git a/src/main/res/mipmap-xxxhdpi/icon.png b/src/main/res/mipmap-xxxhdpi/icon.png
+index a41917d..870d0d1 100644
+Binary files a/src/main/res/mipmap-xxxhdpi/icon.png and b/src/main/res/mipmap-xxxhdpi/icon.png differ

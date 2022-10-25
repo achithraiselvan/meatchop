@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.meatchop.widget.TMCTextView
+        android:id="@+id/savedaddresses_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="55dp"
+        android:text="SAVED ADDRESSES"
+        android:textSize="14sp"
+        android:textColor="@color/primary_text_color"
+        app:customTextViewFont="@string/font_open_sans_semibold"/>
+
+    <LinearLayout
+        android:id="@+id/addresslayout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imageview_home"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/icon_home" />
+
+            <ImageView
+                android:id="@+id/imageview_others"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/icon_location" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/addresstype_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOME"
+                android:textSize="14sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/addressline_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G4, Block 3, GLN Residency"
+                android:maxLines="1"
+                android:maxWidth="300dp"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fieldseperator_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="1dp"
+        android:background="@color/fieldseperator_color"/>
+
+</LinearLayout>

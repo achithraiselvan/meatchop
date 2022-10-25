@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_container"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/listitem_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="left|center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/itemnotselected_view"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/icon_marinadeselection_circle"/>
+
+            <ImageView
+                android:id="@+id/itemselected_view"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:visibility="gone"
+                android:src="@drawable/radiobutton"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/expandedListTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chicken Curry Cut (Skinless)"
+                android:textSize="13sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_semibold" />
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/netweight_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Net: 200g"
+                android:textSize="11sp"
+                android:textColor="@color/secondary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular" />
+
+        </LinearLayout>
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/itemprice_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="250"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            app:customTextViewFont="@string/font_open_sans_bold" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

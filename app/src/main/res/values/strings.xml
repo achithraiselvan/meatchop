@@ -1,0 +1,201 @@
+<resources>
+    <string name="app_name">The Meat Chop</string>
+    <string name="appname_caps">THE MEAT CHOP</string>
+    <string name="font_open_sans_regular">OpenSans-Regular</string>
+    <string name="font_open_sans_bold">OpenSans-Bold</string>
+    <string name="font_open_sans_semibold">OpenSans-Semibold</string>
+    <string name="font_roboto_light">Roboto-Light</string>
+    <string name="font_roboto_bold">Roboto-Bold</string>
+    <string name="font_oogieboogie">OogieBoogie</string>
+    <string name="font_playfair_blackitalic">PlayfairDisplay-BlackItalic</string>
+    <string name="font_playfair_medium">PlayfairDisplay-Medium</string>
+    <string name="font_playfair_semibold">PlayfairDisplay-SemiBold</string>
+    <string name="font_playfair_semibolditalic">PlayfairDisplay-SemiBoldItalic</string>
+    <string name="font_playfair_black">PlayfairDisplay-Black</string>
+    <string name="font_playfair_regular">PlayfairDisplay-Regular</string>
+
+    <!-- Login Page Strings-->
+    <string name="nineone">+91</string>
+    <string name="onetimesmsdesp">We will send you a one time message for confirmation.</string>
+    <string name="connectsocial_text">Or connect using a social media account</string>
+    <string name="otpverification_text">Please enter the 6-digit code sent to you at</string>
+    <string name="mobile_text">Mobile number</string>
+    <string name="phonenooremail">Mobile number or email address</string>
+    <string name="resendcode">Resend code</string>
+    <string name="in">in</string>
+    <string name="skipitfornow_text"><u>Skip it for now</u></string>
+
+    <!-- Alert Messages -->
+    <string name="mobilenoinvalid_msg">Please enter valid mobile number</string>
+    <string name="emailinvalid_msg">Please enter valid email</string>
+    <string name="invalidemailorphoneno">Please enter valid Mobile number</string>
+    <string name="otpinvalid_msg">Please enter 6-digit OTP</string>
+    <string name="incorrectotp_text">OTP entered is incorrect. Please try again.</string>
+    <string name="signuperror_text">Problem in signing up. Please contact our support team</string>
+    <string name="signinerror_text">Problem in signing in. Please contact our support team</string>
+    <string name="allowotpsmsread">Allow \'The Meat Chop\' to read the message and enter the code?</string>
+    <string name="allow_capt">Allow</string>
+    <string name="deny_capt">Deny</string>
+    <string name="retry_capt">Retry</string>
+    <string name="yes_capt">Yes</string>
+    <string name="no_capt">No</string>
+    <string name="ok_capt">Ok</string>
+    <string name="contactsupport_capt">Contact Support</string>
+    <string name="cancel_capt">Cancel</string>
+    <string name="logoutconfirmation_string">Are you sure want to logout?</string>
+    <string name="exitconfirmation_string">Are you sure want to exit?</string>
+    <string name="deleteconfirmation_string">Are you sure want to delete?</string>
+    <string name="thanksforfeedback_message">Thanks for submitting the feedback!</string>
+    <string name="thanksforrating_message">Thank you for your rating!</string>
+
+    <!-- Alert Titles -->
+    <string name="invalidemail_title">Invalid Mobile Number</string>
+    <string name="invalidmobile_title">Invalid Mobile Number</string>
+    <string name="invalidemailmobile_title">Invalid Email / Mobile Number</string>
+    <string name="invalidotp_title">Invalid OTP</string>
+    <string name="error_title">Error</string>
+    <string name="allowsms_title">SMS Permission</string>
+    <string name="logoutconfirmation_title">Logout</string>
+    <string name="invalidname_title">Please enter your Name</string>
+
+    <!-- Bottombar Strings-->
+    <string name="home">HOME</string>
+    <string name="favorites">FAVORITES</string>
+    <string name="blogs">BLOGS</string>
+    <string name="more">MORE</string>
+    <string name="account">ACCOUNT</string>
+    <string name="search">SEARCH</string>
+    <string name="share">SHARE US</string>
+    <string name="contactus">CONTACT US</string>
+    <string name="cart">CART</string>
+
+    <!-- More Screen Strings -->
+    <string name="profile">Profile</string>
+    <string name="notifications">Notifications</string>
+    <string name="myorders">Orders</string>
+    <string name="help">Help</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="rateourapp">Rate our app</string>
+    <string name="rateusingoogle">Rate us in Google</string>
+    <string name="title_activity_t_m_c_home">TMCHomeActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="Rs">\u20B9</string>
+
+    <!-- MenuItemActivity Strings-->
+
+    <string name="google_map_api_key">AIzaSyDYkZGOckF609Cjt6mnyNX9QhTY9-kAqGY</string>
+    <string name="searchitems_text">Search for your favorite items</string>
+
+    <!-- LocationMap Strings-->
+    <string name="addressalert_title">Detail Missing</string>
+    <string name="enterhouseflatno_alert">Please enter House or Flat no</string>
+    <string name="enteraddress_alert">Please enter address</string>
+    <string name="enterlandmark_alert">Please enter Landmark</string>
+    <string name="enterpincode_alert">Please enter pincode</string>
+    <string name="otherstag_text">Please enter address type</string>
+    <string name="locationdeliverable_alert">Hurray! We deliver to your location</string>
+    <string name="locationnotdeliverable_alert">Sorry, we currently don\'t offer delivery to your location</string>
+    <string name="locationsaveagain_alert">Unable to save the address. Please save again!</string>
+
+    <string name="loginpage_appdesp">Start cooking great food at home</string>
+
+    <string name="tilenotloaded_alertmsg">Items not loaded. Please try again!</string>
+    <string name="homedelivery_text">Home Delivery</string>
+    <string name="storepickup_text">Store Pickup</string>
+    <string name="itemdeletionalermessage_text">Are you sure want to remove this item?</string>
+    <string name="locationnotfetched_alert">Unable to fetch the location. Please try again!</string>
+    <string name="forcelogin_alert">Please login again to add location!</string>
+    <string name="forcelogin_alertforadditem">Please login again to add items to cart!</string>
+    <string name="cartempty_alert">Your cart is empty. Please add items to checkout</string>
+
+    <string name="itemnotavl_title">Item not available</string>
+    <string name="itemnotavl_alertmessage1">Selected item</string>
+    <string name="itemnotavl_alertmessage2">not available. Please choose another item</string>
+    <string name="minorderval_alertmessage">Your cart value is not sufficient. Minimum order value for delivery is </string>
+    <string name="meatprodnotavl_alertmessage">Your cart value for Meat products not sufficient. Please add any meat product to checkout!</string>
+
+    <!-- Payment Page Alerts -->
+    <string name="paymentfailedalert_title">Payment Failed</string>
+    <string name="processingpayment_alert1">Please Wait – Your transaction is being processed</string>
+    <string name="processingpayment_alert2">do not click away from this page.</string>
+    <string name="paymentfailed_alert">Payment could not be processed. Please try again!</string>
+    <string name="paymentfailedandrefundinfo_alert">Payment could not be processed. Please try again. Any amount debited would be refunded back in 24 hours!</string>
+    <string name="onlinepaymentrecommendedalert_title">Online Payment Recommended</string>
+    <string name="onlinepaymentrecommendedalert_message">Online Payment Recommended to reduce contact between you and delivery partner. Are
+                                               you sure you want to proceed with Cash On Delivery?</string>
+    <string name="onlinepaymentsuccessalert_title">Payment Success</string>
+    <string name="onlinepaymentsuccessalert_desp">Your transaction has been processed successfully</string>
+
+    <string name="lastpaymentsuccessalert_desp">Your last transaction has been processed successfully</string>
+
+    <string name="confirmorder_title">Confirm Order</string>
+    <string name="confirmorder_desp">Are you sure want to confirm the order? Orders once placed cannot be cancelled or altered</string>
+    <string name="confirmplaceorder_title">Place Order</string>
+    <string name="confirmplacerder_desp">Are you sure want to place your order?</string>
+    <string name="paymentpageloading_alert1">Your order placed successfully!</string>
+    <string name="paymentpageloading_alert2">Proceeding to Payment Page</string>
+    <string name="checkinglasttransaction_alert">Checking your last transaction status</string>
+    <string name="lasttransactionfailedalert_title">Transaction Failed</string>
+    <string name="lasttransactionfailedalert_desp">We regret to inform that your last transaction was failed. Any amount debited would be refunded back in 24 hours!</string>
+    <string name="deliveryslotsloading_desp">Fetching Delivery Slots</string>
+    <string name="checkingorderstatus_desp">Fetching order status</string>
+    <string name="loadingbilldetails_desp">Loading Bill details</string>
+
+    <!-- Marinade Alerts-->
+    <string name="marinade_nooptionselected_alert">Please select atleast one option</string>
+    <string name="removeitemfromcarttitle">Remove item</string>
+    <string name="multiplecustomizationsalert">This item has multiple customizations added. Proceed to cart to remove item?</string>
+
+    <string name="slotnotavailablealert_title">Slot not available</string>
+    <string name="slotnotavailablealert_text">Selected slot not available. Please choose another slot!</string>
+
+    <string name="slotnotselected_title">Slot not selected</string>
+    <string name="slotnotselectedalert_text">Please choose your slot!</string>
+
+    <string name="couponsempty_message">No Coupons available</string>
+    <string name="couponnotapplied_alerttitle">Coupon not applied</string>
+    <string name="couponlimitexceeded_alertmessage">Sorry. You have exhaused the usage limit for coupon code!</string>
+    <string name="couponcartvalueless_alertmessage">Your cart value is not sufficient. Minimum cart value should be</string>
+    <string name="couponerrormessage_newuser">Coupon is applicable only for new users</string>
+    <string name="couponmeatnotavl_alertmessage">Please add meat products in your cart for availing coupon discount</string>
+    <string name="couponitemvalueless_alertmessage">Your item value is not sufficient. Minimum item value should be</string>
+    <string name="couponapplied_alerttitle">Coupon applied</string>
+    <string name="couponappliedsuccessfully_alertmessage">Congrats! Coupon applied successfully. </string>
+
+    <!-- Rating Alerts-->
+    <string name="providequalityrating_alert">Please provide rating for quality</string>
+    <string name="providedeliveryrating_alert">Please provide rating for delivery</string>
+
+    <string name="shareussubject_message">Download \'The Meat Chop (TMC)\' app</string>
+    <string name="shareusbody_message">Hey, have you tried \'The Meat Chop(TMC)\'. Their fish and meat are the freshest and the bestest. Give it a try, download their app at  https://play.google.com/store/apps/details?id=com.meatchop</string>
+
+    <string name="ordercancelledalert_title">Cancel Order</string>
+    <string name="ordercancelledalert_desp">Are you sure want to cancel your order?</string>
+    <string name="ordercancelledsuccessalert_title">Order Cancelled</string>
+    <string name="ordercancelledsuccessalert_desp">Your order is cancelled!</string>
+    <string name="ordercancelnotpossible_title">Order not cancelled</string>
+    <string name="ordercancelnotpossible_desp">Cancellation window closed. Please contact our support for more assistance</string>
+
+    <string name="paymentpageloading_alert3">Placing your order and </string>
+    <string name="paymentpageloading_alert4">proceeding to Payment Page</string>
+    <string name="paymentpageloading_alert5">Please wait</string>
+    <string name="paymentpageloading_alert6">while your transaction is being processed!</string>
+
+    <string name="orderconfirmationloading_alert1">Please wait</string>
+    <string name="orderconfirmationloading_alert2">while we place your order!</string>
+
+    <string name="servererror_alert">Server error</string>
+    <string name="orderfailure_alert">Server has encountered a problem and your order was not placed. Please try again! If this issue persists please call our customer care at </string>
+
+    <string name="duplicateorderalert_message">An order with SIMILAR items placed few minutes back. Do you want to view your last order?</string>
+
+</resources>

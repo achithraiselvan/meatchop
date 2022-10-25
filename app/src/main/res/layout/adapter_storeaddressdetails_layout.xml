@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/contactusbordercolor_2"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/storedetails_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/storedetailscontactus_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/storetitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hastinapuram"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/serviceabledesp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="(Serviceable for your location)"
+                android:textSize="13sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+        </LinearLayout>
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/storeaddress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="false"
+            android:text="No 57, Rajendra Prasad Road, Hastinapuram, Chromepet, Chennai - 44"
+            android:textSize="13sp"
+            android:textColor="@color/primary_text_color"
+            app:customTextViewFont="@string/font_open_sans_regular"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/callstore_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/addcutsandweight_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.meatchop.widget.TMCTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Call Store"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/getdirections_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/addcutsandweight_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.meatchop.widget.TMCTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get Directions"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fieldseperator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+
+
+</LinearLayout>

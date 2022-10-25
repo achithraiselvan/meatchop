@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_below="@+id/map_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/addressdetails_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:maxWidth="250dp"
+                    android:ellipsize="end"
+                    android:layout_marginRight="20dp"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_semibold"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/changelocation_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right|center"
+                android:orientation="vertical">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/changelocation_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="CHANGE"
+                    android:textSize="14sp"
+                    android:textColor="@color/meatchopbg_red"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/flatblockno_desp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondary_text_color"
+                android:hint="ADDRESS LINE 1"
+                android:textSize="11sp"
+                android:textColor="@color/secondary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/flatblockno_text"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:background="@color/white"
+                android:imeOptions="actionNext"
+                android:textSize="13sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="1dp"
+                android:background="@color/fieldseperator_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/addressline_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondary_text_color"
+                android:hint="ADDRESS LINE 2"
+                android:textSize="11sp"
+                android:textColor="@color/secondary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/addressline_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/white"
+                android:inputType="textCapWords"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:layout_marginTop="2dp"
+                android:textSize="13sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="1dp"
+                android:background="@color/fieldseperator_color"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/landmark_desp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondary_text_color"
+                android:hint="LANDMARK"
+                android:textSize="11sp"
+                android:textColor="@color/secondary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/landmark_text"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/white"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:layout_marginTop="2dp"
+                android:textSize="13sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="1dp"
+                android:background="@color/fieldseperator_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/pincode_desp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondary_text_color"
+                android:hint="PINCODE"
+                android:textSize="11sp"
+                android:textColor="@color/secondary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/pincode_text"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:maxLength="6"
+                android:background="@color/white"
+                android:inputType="number"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:layout_marginTop="2dp"
+                android:textSize="13sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="1dp"
+                android:background="@color/fieldseperator_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/secondary_text_color"
+                android:hint="TAG AS"
+                android:textSize="13sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_semibold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/hometag_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="60dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/icon_addresstag_home"/>
+
+                        <com.meatchop.widget.TMCTextView
+                            android:id="@+id/home_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColorHint="@color/secondary_text_color"
+                            android:hint="Home"
+                            android:textSize="13sp"
+                            android:textColor="@color/primary_text_color"
+                            app:customTextViewFont="@string/font_open_sans_semibold"/>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/hometag_seperatorline"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/fieldseperator_color"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/others_layout"
+                    android:layout_width="160dp"
+                    android:layout_gravity="left|center"
+                    android:gravity="left|center"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/icon_otherstag_location"/>
+
+                        <com.meatchop.widget.TMCEditText
+                            android:id="@+id/othertag_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:layout_marginLeft="5dp"
+                            android:background="@color/white"
+                            android:imeOptions="actionDone"
+                            android:textColorHint="@color/secondary_text_color"
+                            android:hint="e.g.: Mom's home"
+                            android:textSize="13sp"
+                            android:textColor="@color/primary_text_color"
+                            app:customTextViewFont="@string/font_open_sans_semibold"/>
+
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/othertag_seperatorline"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/fieldseperator_color"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/confirmlocation_layout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/confirmlocation_border"
+            android:gravity="center"
+            android:layout_height="50dp">
+
+            <com.meatchop.widget.TMCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONFIRM LOCATION"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

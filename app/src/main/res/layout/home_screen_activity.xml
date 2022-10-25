@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bottomView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/topbar_homescreen"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/appname_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:text="@string/app_name"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/locationdetails_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/chooselocation_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:orientation="vertical">
+
+                            <com.meatchop.widget.TMCTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Choose Location"
+                                android:textSize="13sp"
+                                android:textColor="@color/secondary_text_color"
+                                app:customTextViewFont="@string/font_open_sans_semibold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/selectedlocation_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.meatchop.widget.TMCTextView
+                                    android:id="@+id/deliverat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textSize="13sp"
+                                    android:textColor="@color/secondary_text_color"
+                                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+                                <com.meatchop.widget.TMCTextView
+                                    android:id="@+id/delivertoaddress_textview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:maxWidth="260dp"
+                                    android:textSize="12sp"
+                                    android:textColor="#2a3132"
+                                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                    <ImageView
+                        android:layout_height="13dp"
+                        android:layout_width="13dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_expandarrow"/>
+                </LinearLayout>
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/locationloadinganim_layout"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:indicatorColor="@color/meatchopbg_red"
+                    app:indicatorName="BallPulseIndicator" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/cartbtn_layout"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_cart"/>
+
+            <LinearLayout
+                android:id="@+id/cartitemcount_layout"
+                android:layout_width="17dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="7dp"
+                android:visibility="visible"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:background="@drawable/cart_circle">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/cartitemcount_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    app:customTextViewFont="@string/font_open_sans_regular"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/homescreen_scrollview"
+        android:layout_below="@+id/topbar_homescreen"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="wrap_content">
+
+
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/topbar_homescreen"
+        android:layout_above="@+id/bottombarseperator"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:id="@+id/recyclerView"
+        android:orientation="vertical"/>
+
+    <FrameLayout
+        android:id="@+id/bottombarseperator"
+        android:layout_above="@+id/bottombar_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="2dp"
+        android:background="@color/bottombarseperator_color"/>
+
+    <LinearLayout
+        android:id="@+id/bottombar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/trackorder_layout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:background="#dfecf2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:background="#5bc8ac"
+                        android:orientation="vertical">
+
+                        <com.meatchop.widget.TMCTextView
+                            android:id="@+id/status_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="STATUS"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    </LinearLayout>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/orderstatus_desp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:textSize="13sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/trackorderloadinganim_layout"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:visibility="visible"
+                        android:layout_gravity="center"
+                        app:indicatorColor="@color/black"
+                        app:indicatorName="BallPulseIndicator" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/callbutton_layout"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:src="@drawable/icon_call_ordertracking"/>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/calldesp_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:text="Call Store"
+                        android:textSize="9sp"
+                        android:textColor="@color/black"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ratelastorder_layout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:background="#dfecf2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Rate your last order"
+                        android:textSize="15sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/stars_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/rflayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rfstar1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:visibility="visible"
+                            android:src="@drawable/icn_ratingstar"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/rflayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rfstar2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:visibility="visible"
+                            android:src="@drawable/icn_ratingstar"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/rflayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rfstar3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:visibility="visible"
+                            android:src="@drawable/icn_ratingstar"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/rflayout4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rfstar4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:visibility="visible"
+                            android:src="@drawable/icn_ratingstar"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/rflayout5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rfstar5"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:visibility="visible"
+                            android:src="@drawable/icn_ratingstar"/>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/appupdatealert_layout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:background="#1b0826">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/releasenotes_desp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/updateapp_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:background="@drawable/updateappalert_border"
+                    android:orientation="vertical">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="UPDATE APP"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+                app:itemTextAppearanceInactive="@style/BottomNavigationView"
+                android:background="@color/white"
+                bottomView:labelVisibilityMode="labeled"
+                bottomView:itemIconTint="@drawable/menu_item_selector"
+                bottomView:itemTextColor="@drawable/menu_item_selector"
+                bottomView:itemIconSize="20dp"
+                bottomView:itemIconPadding="5dp"
+                bottomView:menu="@menu/bottomappbar_menu" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/appupdateanimmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.60">
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/mandatoryappupdatealert_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="#1b0826">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/mandatoryreleasenotes_desp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:text="Please upgrade the app for better ordering experience"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mandatoryupdateapp_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/updateappalert_border"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:text="UPDATE APP"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/loadinganimmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.60">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/loadingdesp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="More to meat than meets the eye"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:customTextViewFont="@string/font_open_sans_bold"/>
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/loadinganim_layout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            app:indicatorColor="@color/meatchopbg_red"
+            app:indicatorName="BallPulseIndicator" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/loginscreenmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.70">
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/loginscreen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/meatchopdesp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/appname_caps"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:customTextViewFont="@string/font_open_sans_semibold"/>
+
+        <LinearLayout
+            android:id="@+id/image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/loginimageview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:src="@mipmap/tmcapp_loginheaderimage" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loginpage_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/loginorsignup_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login or Signup"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:customTextViewFont="@string/font_open_sans_semibold"/>
+
+            <LinearLayout
+                android:id="@+id/mobilenoinput_layout"
+                android:layout_below="@+id/image_layout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="60dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@mipmap/icon_indiaflag" />
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/nineone_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+91"
+                        android:layout_marginLeft="0dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/secondary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_regular"/>
+
+                    <com.meatchop.widget.TMCEditText
+                        android:id="@+id/mobile_editext"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/mobile_text"
+                        android:maxLength="10"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:textColorHint="@color/secondary_text_color"
+                        android:background="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customEditTextFont="@string/font_open_sans_regular"/>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/secondary_text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logincontinuebutton_layout"
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONTINUE"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/skipitfornow_btn"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/skipitfornow_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skipitfornow_text"
+                    android:textSize="14sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_semibold"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/bannerscreenmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.40">
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/banner_layout"
+        android:layout_width="340dp"
+        android:layout_height="650dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/banner_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="650dp"
+            android:src="@mipmap/bannerimage"/>
+
+        <ImageView
+            android:id="@+id/bannerclose_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="right"
+            android:src="@drawable/icon_banner_close"/>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ratingmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.60"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ratingscreen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.meatchop.widget.TMCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:text="Rate your last order"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+            <ImageView
+                android:id="@+id/feedbackclose_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/icon_banner_close"/>
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/bottombarseperator_color"/>
+
+        <LinearLayout
+            android:id="@+id/itemdetails_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/itemdetails_desp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chicken Skinless x 1, Chicken Drumstick x 2, Goat Premium shoulder cut x 1"
+                android:textSize="13sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/bottombarseperator_color"/>
+
+        <LinearLayout
+            android:id="@+id/ratequality_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <com.meatchop.widget.TMCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Rate Quality"
+                android:textSize="15sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            <LinearLayout
+                android:id="@+id/qualitystars_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/rqlayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rqstar1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:src="@drawable/icn_ratingstar"/>
+
+                    <ImageView
+                        android:id="@+id/rqstar1_sel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@drawable/icn_ratingstar_selected"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/rqlayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rqstar2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:src="@drawable/icn_ratingstar"/>
+
+                    <ImageView
+                        android:id="@+id/rqstar2_sel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@drawable/icn_ratingstar_selected"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/rqlayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rqstar3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:src="@drawable/icn_ratingstar"/>
+
+                    <ImageView
+                        android:id="@+id/rqstar3_sel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@drawable/icn_ratingstar_selected"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/rqlayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rqstar4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:src="@drawable/icn_ratingstar"/>
+
+                    <ImageView
+                        android:id="@+id/rqstar4_sel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@drawable/icn_ratingstar_selected"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/rqlayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rqstar5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:src="@drawable/icn_ratingstar"/>
+
+                    <ImageView
+                        android:id="@+id/rqstar5_sel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@drawable/icn_ratingstar_selected"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ratedelivery_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <com.meatchop.widget.TMCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Rate Delivery"
+                android:textSize="15sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            <LinearLayout
+                android:id="@+id/deliverystars_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/rdlayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rdstar1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:src="@drawable/icn_ratingstar"/>
+
+                    <ImageView
+                        android:id="@+id/rdstar1_sel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@drawable/icn_ratingstar_selected"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/rdlayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rdstar2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:src="@drawable/icn_ratingstar"/>
+
+                    <ImageView
+                        android:id="@+id/rdstar2_sel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@drawable/icn_ratingstar_selected"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/rdlayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rdstar3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:src="@drawable/icn_ratingstar"/>
+
+                    <ImageView
+                        android:id="@+id/rdstar3_sel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@drawable/icn_ratingstar_selected"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/rdlayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rdstar4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:src="@drawable/icn_ratingstar"/>
+
+                    <ImageView
+                        android:id="@+id/rdstar4_sel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@drawable/icn_ratingstar_selected"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/rdlayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rdstar5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:src="@drawable/icn_ratingstar"/>
+
+                    <ImageView
+                        android:id="@+id/rdstar5_sel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:src="@drawable/icn_ratingstar_selected"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/feedback_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="left|center"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/feedbackdetails_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginLeft="30dp"
+                android:background="@color/white"
+                android:imeOptions="actionDone"
+                android:textColorHint="@color/secondary_text_color"
+                android:hint="Type your valuable feedback"
+                android:text=""
+                android:textSize="15sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/bottombarseperator_color"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/bottombarseperator_color"/>
+
+        <LinearLayout
+            android:id="@+id/ratingsubmit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:background="@drawable/additems_border"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/applaunchimage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/image_applaunchscreen_2"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

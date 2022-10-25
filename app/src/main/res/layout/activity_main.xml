@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/applaunchimage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/image_applaunchscreen_2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/no_network_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#242424"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:visibility="gone" >
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/header_text"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="left|center"
+            android:gravity="left|center"
+            android:text="No Internet Connection"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            app:customTextViewFont="@string/font_open_sans_regular"/>
+
+        <LinearLayout
+            android:id="@+id/nointernetretry_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/nointernet_desp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="RETRY"
+                android:textSize="14sp"
+                android:textColor="#f5c425"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

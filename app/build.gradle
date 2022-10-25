@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    namespace 'com.meatchop'
+    compileSdk 32
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    defaultConfig {
+        applicationId "com.meatchop"
+        minSdk 27
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    allprojects {
+        repositories {
+            google()
+            //here
+            jcenter()
+            mavenCentral()
+
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.j256.ormlite:ormlite-android:5.6'
+    implementation 'com.j256.ormlite:ormlite-core:5.6'
+    implementation 'com.amazonaws:aws-android-sdk-ddb:2.17.0'
+    implementation 'com.amazonaws:aws-android-sdk-mobile-client:2.17.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.8.0-alpha02'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.0'
+    implementation 'com.google.android.libraries.places:places:2.6.0'
+    implementation 'org.jetbrains:annotations:13.0'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.google.maps.android:android-maps-utils:0.6.2'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    implementation 'com.github.smarteist:autoimageslider:1.3.7'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.wang.avi:library:2.1.3'  // Loading Animation
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:1.0.1'
+    implementation 'com.razorpay:checkout:1.6.23'
+    implementation 'com.paytm:pgplussdk:1.4.3'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.firebase:firebase-messaging:23.1.0'
+    implementation 'com.google.android.gms:play-services-analytics:18.0.2'
+    implementation 'io.sentry:sentry-android:3.1.0'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/topbar_couponscreen"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="55dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/back_icon"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_backbutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select your coupon"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fieldseperator_color"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/couponslist_layout"
+        android:layout_below="@+id/topbar_couponscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <ListView
+            android:id="@+id/coupons_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:visibility="visible"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/loadinganimmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.70">
+    </FrameLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loadinganim_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:indicatorColor="@color/meatchopbg_red"
+        app:indicatorName="BallPulseIndicator" />
+
+
+
+    <LinearLayout
+        android:id="@+id/couponsempty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pastordersseperator_color"
+        android:layout_below="@+id/topbar_couponscreen"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <com.meatchop.widget.TMCTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/couponsempty_message"
+            android:textSize="16sp"
+            app:customTextViewFont="@string/font_open_sans_regular"
+            android:textColor="@color/primary_text_color" />
+    </LinearLayout>
+
+
+</RelativeLayout>

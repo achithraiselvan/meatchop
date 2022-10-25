@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_container"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/listitem_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/checkmark_view"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_checkmark_1"/>
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/expandedListItem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Chicken"
+            android:textSize="13sp"
+            android:textColor="@color/primary_text_color"
+            android:layout_marginLeft="40dp"
+            app:customTextViewFont="@string/font_open_sans_regular" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

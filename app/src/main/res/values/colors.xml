@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="meatchopbg_red">#eb512f</color>
+    <color name="meatchopng_blue">#467287</color>
+    <color name="primary_text_color">#333333</color>
+    <color name="secondary_text_color">#969696</color>
+    <color name="fieldseperator_color">#e6e6e6</color>
+    <color name="allowbtn_blue">#1c78e8</color>
+    <color name="lightblue">#8c86e3</color>
+    <color name="bottombarseperator_color">#f2f2f2</color>
+    <color name="promotionbg_color">#415252</color>
+
+    <!-- BottomUpTMCCtgy Strings-->
+    <color name="choosectgy_color">#bfbfbf</color>
+    <color name="tmcctgy_color">#808080</color>
+    <color name="subctgy_color">#bfbfbf</color>
+
+    <color name="cartaddtext_color">#333333</color>
+
+    <!-- MenuItemScreen Colors-->
+    <color name="discount_red1">#ff0000</color>
+    <color name="discount_red">#e3332d</color>
+
+    <color name="pastordersseperator_color">#f2f2f2</color>
+
+    <color name="contactusbordercolor_1">#f3f6ff</color>
+    <color name="contactusbordercolor_2">#e5e9f5</color>
+
+    <!--color name="dv_red1">#ff0000</color>
+    <color name="dv_red">#e3332d</color>
+    <color name="loginpage_textcolor">#fc2b5f</color>
+    <color name="green">#39b349</color>
+    <color name="skipnow_grey">#757575</color>
+    <color name="terms_grey">#ababab</color>
+    <color name="terms_blue">#7cafd9</color>
+    <color name="actionbarbg_color">#333333</color>
+
+    <color name="list_divider">#757575</color>
+    <color name="list_background">#ffffff</color>
+    <color name="list_background_pressed">#c9c9c9</color>
+    <color name="counter_text_bg">#000000</color>
+    <color name="list_item_title">#757575</color>
+    <color name="counter_text_color">#757575</color>
+    <color name="black">#000000</color>
+
+    <color name="profilebg_grey">#f5f5f5</color>
+    <color name="profilepage_grey">#f2f2f2</color>
+    <color name="fieldseperator_color">#e6e6e6</color>
+    <color name="primary_text_color">#333333</color>
+    <color name="secondary_text_color">#969696</color>
+    <color name="addressbg_border">#cccccc</color>
+    <color name="orderctgy_border">#e6e6e6</color>
+    <color name="menulistview_border">#c9c9c9</color>
+
+    <color name="disable_donebtn_color">#a8a8a8</color>
+
+    <color name="primary_orange_color">#f7b40a</color>
+    <color name="circular_progress_inactivecolor">#cfcfcf</color>
+    <color name="try_again_color">#808080</color>
+    <color name="search_pane_separator_color">#c2c2c2</color>
+    <color name="list_separator_color">#929292</color>
+    <color name="alert_seperator_color">#d9d9d9</color>
+    <color name="ratingbg_color">#fef5ff</color>
+    <color name="supportheader_color">#a1a1a1</color>
+
+    <color name="status_default_color">#707070</color>
+    <color name="status_pending_color">#ffff03</color>
+    <color name="status_ready_color">#e0162b</color>
+    <color name="status_delivered_color">#16de31</color>
+    <color name="status_borderline_color">#e8e8e8</color>
+    <color name="applycoupon_color">#1d05fa</color>
+    <color name="couponavailed_color">#9e8fff</color>
+
+    <color name="topbar_bordercolor">#f0f0f0</color>
+    <color name="cuisine_textcolor">#666666</color>
+    <color name="fssai_licensecolor">#f7f7f7</color>
+
+    <color name="rating_orangecolor">#fc7600</color>
+    <color name="test_color">#d6d6d6</color-->
+
+
+
+</resources>
+

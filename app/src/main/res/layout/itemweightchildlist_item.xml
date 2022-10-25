@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_container"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/listitem_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="left|center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/itemnotselected_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_marinadeselection_circle"/>
+
+            <ImageView
+                android:id="@+id/itemselected_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:src="@drawable/radiobutton"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/itemgrossweight_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gross: 500g"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_regular" />
+
+                <FrameLayout
+                    android:layout_width="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_height="13dp"
+                    android:layout_marginLeft="7dp"
+                    android:background="@color/secondary_text_color"/>
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/itemnetweight_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="Net: 500g"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_regular" />
+
+                <LinearLayout
+                    android:id="@+id/portionsize_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="7dp"
+                        android:background="@color/secondary_text_color"/>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/portionsize_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_regular" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/itemprice_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text=""
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                app:customTextViewFont="@string/font_open_sans_bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

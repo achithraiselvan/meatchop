@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.VerifyOTPActivity">
+
+    <LinearLayout
+        android:id="@+id/otpdesptext_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/otpdesptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="40dp"
+            android:text="@string/otpverification_text"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text_color"
+            app:customTextViewFont="@string/font_open_sans_regular"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otptext_layout"
+        android:layout_below="@+id/otpdesptext_layout"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/otptext1_layout"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/otptext1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:inputType="number"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/primary_text_color"
+                app:customEditTextFont="@string/font_open_sans_regular"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/secondary_text_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otptext2_layout"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/otptext2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:inputType="number"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/primary_text_color"
+                app:customEditTextFont="@string/font_open_sans_regular"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/secondary_text_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otptext3_layout"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/otptext3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:inputType="number"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/primary_text_color"
+                app:customEditTextFont="@string/font_open_sans_regular"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/secondary_text_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otptext4_layout"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/otptext4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:inputType="number"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/primary_text_color"
+                app:customEditTextFont="@string/font_open_sans_regular"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/secondary_text_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otptext5_layout"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/otptext5"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:inputType="number"
+                android:maxLength="1"
+                android:imeOptions="actionNext"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/primary_text_color"
+                app:customEditTextFont="@string/font_open_sans_regular"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/secondary_text_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otptext6_layout"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCEditText
+                android:id="@+id/otptext6"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:inputType="number"
+                android:maxLength="1"
+                android:imeOptions="actionDone"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/primary_text_color"
+                app:customEditTextFont="@string/font_open_sans_regular"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/secondary_text_color"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resendcodeandverifybtn_layout"
+        android:layout_below="@+id/otptext_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/resendcodebtn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/resendcode_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resendcode"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="14sp"
+                app:customEditTextFont="@string/font_open_sans_semibold" />
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/resendcodein_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="14sp"
+                android:text="@string/in"
+                android:textColor="@color/secondary_text_color"
+                app:customEditTextFont="@string/font_open_sans_semibold"/>
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/resendcodetimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="13sp"
+                android:textColor="@color/secondary_text_color"
+                app:customEditTextFont="@string/font_open_sans_semibold"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/verifyotpbutton_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/verifyotp_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="right"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_rightarrow"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/loadinganimmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.60">
+    </FrameLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loadinganim_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/meatchopbg_red"
+        app:indicatorName="BallPulseIndicator" />
+
+    <FrameLayout
+        android:id="@+id/smspermissionmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.60">
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/allowotpsms_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:background="@drawable/allowsmsalert_border"
+        android:layout_alignParentBottom="true">
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/allowotpsmsdesp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/allowotpsmsread"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text_color"
+            app:customEditTextFont="@string/font_open_sans_regular"/>
+
+        <LinearLayout
+            android:id="@+id/allowdenybtns_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/denysms_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/denysmsdesp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deny_capt"
+                    android:textSize="14sp"
+                    android:textColor="@color/allowbtn_blue"
+                    app:customEditTextFont="@string/font_open_sans_semibold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/allowsms_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:background="@color/allowbtn_blue"
+                android:orientation="vertical">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/allowsmsdesp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allow_capt"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    app:customEditTextFont="@string/font_open_sans_semibold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

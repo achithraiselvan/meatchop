@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/topbar_ordertracking"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="55dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/back_icon"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_backbutton" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/topbar_title"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Details"
+                    android:textSize="15sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_semibold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/callbutton_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:gravity="left|center"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CALL US"
+                    android:textSize="15sp"
+                    android:textColor="@color/meatchopbg_red"
+                    app:customTextViewFont="@string/font_open_sans_semibold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@color/fieldseperator_color"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar_ordertracking">
+
+        <LinearLayout
+            android:id="@+id/orderdetails_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/orderid_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/orderid_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Order"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/orderid_desp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tokenno_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/tokenno_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Token No:"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/tokenno_desp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/totalbillvalue_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Total Bill Value:"
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/totalbillvalue_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/slotdetails_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/slotdetails_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Slot:"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/slotdetails_desp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/deliverylocation_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Delivery Address"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/deliveryaddressdetails_textview"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:textColor="@color/primary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/bottombarseperator_color"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/paymentdetails_layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="visible"
+                    android:weightSum="3"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/selectedpayment_layout"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.meatchop.widget.TMCTextView
+                            android:id="@+id/selectedpaymentmethod_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="Selected Payment Method"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary_text_color"
+                            app:customTextViewFont="@string/font_open_sans_regular"/>
+
+                        <com.meatchop.widget.TMCTextView
+                            android:id="@+id/selectedpaymentmethod_text"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/payonline_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/proceedtopay_border"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.meatchop.widget.TMCTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PAY ONLINE"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            app:customTextViewFont="@string/font_open_sans_bold"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/onlinemodepayment_layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:orientation="vertical">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/onlinemodepayment_desp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Paid Thro Razorpay"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/onlinemodepaymenttype_desp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_regular"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/paymentstatusloadinganim_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        app:indicatorColor="@color/meatchopbg_red"
+                        app:indicatorName="BallPulseIndicator" />
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/checkinglasttransaction_alert"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_regular"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/bottombarseperator_color"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/orderstatus_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/orderreceived_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/ordereceivedicon_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp">
+
+                            <ImageView
+                                android:id="@+id/orderreceivedselected_image"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:tint="@color/meatchopbg_red"
+                                android:src="@drawable/icn_ordertracking_placed"
+                                android:scaleType="centerCrop" />
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/orderreceivedtextdetails_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+
+                            <com.meatchop.widget.TMCTextView
+                                android:id="@+id/orderreceivedtitle_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Order Received"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                            <com.meatchop.widget.TMCTextView
+                                android:id="@+id/orderreceiveddesp_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="We have received your order"
+                                android:textSize="11sp"
+                                android:textColor="@color/primary_text_color"
+                                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="29dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/dottedline" />
+
+                    <LinearLayout
+                        android:id="@+id/orderoutfordelivery_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/outfordeliveryicons_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp">
+
+                            <ImageView
+                                android:id="@+id/outfordeliveryselected_image"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:tint="@color/meatchopbg_red"
+                                android:visibility="gone"
+                                android:src="@drawable/icn_ordertracking_outfordelivery"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/outfordeliveryunselected_image"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:tint="@color/secondary_text_color"
+                                android:src="@drawable/icn_ordertracking_placed"
+                                android:scaleType="centerCrop" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/orderoutfordeliverytextdetails_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+
+                            <com.meatchop.widget.TMCTextView
+                                android:id="@+id/outfordeliverytitle_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Out for Delivery"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                            <com.meatchop.widget.TMCTextView
+                                android:id="@+id/outfordeliverydesp_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Your order is on the way"
+                                android:textSize="11sp"
+                                android:textColor="@color/primary_text_color"
+                                app:customTextViewFont="@string/font_open_sans_regular"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="29dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/dottedline" />
+
+                    <LinearLayout
+                        android:id="@+id/orderdelivered_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="13dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/deliveredicons_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/orderdeliveredselected_image"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:visibility="gone"
+                                android:tint="@color/meatchopbg_red"
+                                android:src="@drawable/icn_ordertracking_delivered"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/orderdeliveredunselected_image"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:tint="@color/secondary_text_color"
+                                android:src="@drawable/icn_ordertracking_delivered"
+                                android:scaleType="centerCrop" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/orderdeliveredtextdetails_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+
+                            <com.meatchop.widget.TMCTextView
+                                android:id="@+id/orderdeliveredtitle_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Order delivered"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                            <com.meatchop.widget.TMCTextView
+                                android:id="@+id/orderdelivereddesp_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Your order has been successfully delivered"
+                                android:textSize="11sp"
+                                android:textColor="@color/primary_text_color"
+                                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/orderstatusloadinganim_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        app:indicatorColor="@color/meatchopbg_red"
+                        app:indicatorName="BallPulseIndicator" />
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/checkingorderstatus_desp"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_regular"/>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/bottombarseperator_color"/>
+
+            <LinearLayout
+                android:id="@+id/orderitemsrecyclerview_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/orderitems_recyclerview"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"
+                android:background="@color/pastordersseperator_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Item Total"
+                        android:textSize="13sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/itemtotal_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="Rs.450"
+                        android:textSize="13sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Delivery Fee"
+                        android:textSize="13sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/deliveryfee_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="Rs.40"
+                        android:textSize="13sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Taxes and Charges"
+                        android:textSize="13sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/taxesandcharges_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="Rs.35"
+                        android:textSize="13sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.meatchop.widget.TMCTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Amount Paid"
+                        android:textSize="13sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                    <com.meatchop.widget.TMCTextView
+                        android:id="@+id/amountpaid_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="Rs.40"
+                        android:textSize="13sp"
+                        android:textColor="@color/primary_text_color"
+                        app:customTextViewFont="@string/font_open_sans_bold"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="15dp"
+                android:background="@color/pastordersseperator_color"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/callusbtnsmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.60"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/callusbtns_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/callbtns_border"
+        android:orientation="vertical">
+
+        <com.meatchop.widget.TMCTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOOSE AN OPTION"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:customTextViewFont="@string/font_open_sans_bold"/>
+
+
+        <LinearLayout
+            android:id="@+id/callstore_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Store"
+                android:layout_marginLeft="30dp"
+                android:textSize="15sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/callsupport_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Call Support"
+                android:textSize="15sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/calldeliverypartner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <com.meatchop.widget.TMCTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Call Delivery Partner"
+                android:textSize="15sp"
+                android:textColor="@color/primary_text_color"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/loadinganimmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.80">
+    </FrameLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loadinganim_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:indicatorColor="@color/meatchopbg_red"
+        app:indicatorName="BallPulseIndicator" />
+
+    <FrameLayout
+        android:id="@+id/paymentpageloadingmask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:alpha="0.80">
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/paymentpageloadinganim_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:indicatorColor="@color/meatchopbg_red"
+            app:indicatorName="BallPulseIndicator" />
+
+        <com.meatchop.widget.TMCTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/paymentpageloading_alert1"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            app:customTextViewFont="@string/font_open_sans_regular"/>
+
+        <com.meatchop.widget.TMCTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/paymentpageloading_alert2"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            app:customTextViewFont="@string/font_open_sans_regular"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/gridview_container"
+    android:orientation="vertical">
+
+    <com.meatchop.widget.TMCTextView
+        android:id="@+id/sessiondetails_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/primary_text_color"
+        android:textSize="15sp"
+        app:customTextViewFont="@string/font_open_sans_bold" />
+
+    <GridView
+        android:id="@+id/slots_gridview_expressdelivery"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:columnWidth="200dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="0dp"
+        android:stretchMode="columnWidth"
+        android:gravity="left|center" />
+
+    <GridView
+        android:id="@+id/slots_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:columnWidth="100dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="25dp"
+        android:horizontalSpacing="0dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center" />
+
+    <FrameLayout
+        android:id="@+id/gridviewseperator_layout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_height="25dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardUseCompatPadding="false"
+                android:adjustViewBounds="true"
+                app:cardPreventCornerOverlap="true"
+                app:cardCornerRadius="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/checkoutimage_view"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tmctile_progressbar"
+                android:layout_width="120dp"
+                app:cardUseCompatPadding="false"
+                android:adjustViewBounds="true"
+                app:cardElevation="2dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardCornerRadius="10dp"
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/progress_animation"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/itemname_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chicken Breast Fillet Cut"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.meatchop.widget.TMCTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Net Qty:"
+                    android:textSize="11sp"
+                    android:textColor="@color/secondary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/itemqty_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="400 gms"
+                    android:textSize="10sp"
+                    android:textColor="@color/secondary_text_color"
+                    app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/itemprice_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="119.00"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/additem_layout"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/addmealkit_border">
+
+                <com.meatchop.widget.TMCTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADD"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    app:customTextViewFont="@string/font_open_sans_bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addcartitems_layout"
+                android:layout_width="70dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="30dp">
+
+                <LinearLayout
+                    android:id="@+id/cartminus_btn"
+                    android:layout_width="28dp"
+                    android:layout_height="40dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/icon_roundminus"/>
+                </LinearLayout>
+
+                <com.meatchop.widget.TMCTextView
+                    android:id="@+id/cartcount_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="1"
+                    android:textSize="17sp"
+                    android:textColor="@color/cartaddtext_color"
+                    app:customTextViewFont="@string/font_open_sans_semibold"/>
+
+                <LinearLayout
+                    android:id="@+id/cartplus_btn"
+                    android:layout_width="28dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:src="@drawable/icon_roundplus"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/customizabletext_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:text="Customizable"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                app:customTextViewFont="@string/font_open_sans_regular"/>
+
+            <com.meatchop.widget.TMCTextView
+                android:id="@+id/itemnotavailable_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Out of Stock"
+                android:textSize="12sp"
+                android:textColor="@color/meatchopbg_red"
+                app:customTextViewFont="@string/font_open_sans_bold"/>
+
+
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fieldseperator_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="1dp"
+        android:background="@color/fieldseperator_color"/>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/listtitle_fieldseperator"
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:visibility="gone"
+        android:background="@color/fieldseperator_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/listtitle_fieldseperator">
+
+
+        <com.meatchop.widget.TMCTextView
+            android:id="@+id/listTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fresh Meat"
+            android:layout_weight="1"
+            android:layout_marginLeft="60dp"
+            android:textSize="13sp"
+            android:textColor="@color/primary_text_color"
+            app:customTextViewFont="@string/font_open_sans_semibold"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center|right">
+
+            <ImageView
+                android:id="@+id/expandarrow_indicator"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:src="@drawable/icon_expandarrow" />
+
+            <ImageView
+                android:id="@+id/collapsearrow_indicator"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:layout_gravity="center|right"
+                android:src="@drawable/icon_collapsearrow" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

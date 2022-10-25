@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--string name="ga_trackingId" translatable="false">170916153</string-->
+    <string name="ga_trackingId" translatable="false">UA-130050277-1</string>
+    <screenName name="com.meatchop.activities.HomeScreenActivity">Home Screen</screenName>
+    <screenName name="com.meatchop.activities.TMCMenuItemActivity">Menu Screen</screenName>
+
+</resources>

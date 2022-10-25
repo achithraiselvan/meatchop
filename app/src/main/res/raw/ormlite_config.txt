@@ -1,0 +1,206 @@
+#
+# generated on 2015/11/28 01:27:24
+#
+# --table-start--
+dataClass=com.meatchop.sqlitedata.Orderdetailslocal
+tableName=Orderdetailslocal
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=serverkey
+# --field-end--
+# --field-start--
+fieldName=orderid
+unique=true
+# --field-end--
+# --field-start--
+fieldName=tokenno
+# --field-end--
+# --field-start--
+fieldName=vendorkey
+# --field-end--
+# --field-start--
+fieldName=vendorname
+# --field-end--
+# --field-start--
+fieldName=itemdesp
+# --field-end--
+# --field-start--
+fieldName=coupondiscount
+# --field-end--
+# --field-start--
+fieldName=couponkey
+# --field-end--
+# --field-start--
+fieldName=coupontype
+# --field-end--
+# --field-start--
+fieldName=deliveryamount
+# --field-end--
+# --field-start--
+fieldName=gstamount
+# --field-end--
+# --field-start--
+fieldName=payableamount
+# --field-end--
+# --field-start--
+fieldName=merchantorderid
+# --field-end--
+# --field-start--
+fieldName=slotname
+# --field-end--
+# --field-start--
+fieldName=slotdate
+# --field-end--
+# --field-start--
+fieldName=slottimerange
+# --field-end--
+# --field-start--
+fieldName=ordertype
+# --field-end--
+# --field-start--
+fieldName=deliverytype
+# --field-end--
+# --field-start--
+fieldName=paymentmode
+# --field-end--
+# --field-start--
+fieldName=userkey
+# --field-end--
+# --field-start--
+fieldName=usermobile
+# --field-end--
+# --field-start--
+fieldName=orderplaceddate
+# --field-end--
+# --field-start--
+fieldName=orderplacedtime
+# --field-end--
+# --field-start--
+fieldName=useraddress
+# --field-end--
+# --field-start--
+fieldName=notes
+# --field-end--
+# --field-start--
+fieldName=orderplacedtimeinlong
+# --field-end--
+# --field-start--
+fieldName=ratingprovided
+# --field-end--
+# --field-start--
+fieldName=ratingskipped
+# --field-end--
+# --field-start--
+fieldName=discountamount
+# --field-end--
+# --field-start--
+fieldName=paymenttype
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.meatchop.sqlitedata.Ordertrackingdetailslocal
+tableName=Ordertrackingdetailslocal
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=serverkey
+# --field-end--
+# --field-start--
+fieldName=orderid
+unique=true
+# --field-end--
+# --field-start--
+fieldName=orderreadytime
+# --field-end--
+# --field-start--
+fieldName=orderpickeduptime
+# --field-end--
+# --field-start--
+fieldName=ordercancelledtime
+# --field-end--
+# --field-start--
+fieldName=deliveryuserlat
+# --field-end--
+# --field-start--
+fieldName=deliveryuserlong
+# --field-end--
+# --field-start--
+fieldName=orderstatus
+# --field-end--
+# --field-start--
+fieldName=deliveryusermobileno
+# --field-end--
+# --field-start--
+fieldName=deliveryuserkey
+# --field-end--
+# --field-start--
+fieldName=orderconfirmedtime
+# --field-end--
+# --field-start--
+fieldName=orderplacedtime
+# --field-end--
+# --field-start--
+fieldName=vendorkey
+# --field-end--
+# --field-start--
+fieldName=deliveryusername
+# --field-end--
+# --field-start--
+fieldName=orderdeliverytime
+# --field-end--
+# --field-start--
+fieldName=orderplacedtimeinlong
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.meatchop.sqlitedata.Ratingorderdetailslocal
+tableName=Ratingorderdetailslocal
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=serverkey
+# --field-end--
+# --field-start--
+fieldName=createdtime
+# --field-end--
+# --field-start--
+fieldName=deliveryrating
+# --field-end--
+# --field-start--
+fieldName=feedback
+# --field-end--
+# --field-start--
+fieldName=itemrating
+# --field-end--
+# --field-start--
+fieldName=orderid
+# --field-end--
+# --field-start--
+fieldName=userkey
+# --field-end--
+# --field-start--
+fieldName=usermobileno
+# --field-end--
+# --field-start--
+fieldName=vendorkey
+# --field-end--
+# --field-start--
+fieldName=qualityrating
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
